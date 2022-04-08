@@ -17,6 +17,7 @@ async function main() {
 //for temporary purpose
 import express, { json } from 'express';
 import cors from 'cors';
+import path from 'path';
 // import { route } from './routes';
 const app = express();
 import addFavoriteCycle from './userApi/addFavoriteCycle.js';
@@ -52,8 +53,11 @@ app.use(json());
 app.use(cors());
 if(process.env.NODE_ENV){
     
-    app.use(express.static("frontend/cycle_app/build"));
+    app.use(express.static(path.join(__dirname, '../frontend/cycle_app/build')));
+     
 }
+
+
 
 // app.use(express.static("./../iitk_cycling/public"));
 // app.set("view engine","ejs");
