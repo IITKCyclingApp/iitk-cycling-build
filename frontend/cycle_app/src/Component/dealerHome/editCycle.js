@@ -46,7 +46,7 @@ class editCycle extends React.Component {
 
             };
 
-            const res = await fetch('http://localhost:5000/editCycle', req);
+            const res = await fetch('/editCycle', req);
             const response = await res.json();
 
             if (res.status === 200) {

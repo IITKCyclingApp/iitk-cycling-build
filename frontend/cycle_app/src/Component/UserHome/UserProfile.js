@@ -54,7 +54,7 @@ class UserProfile extends React.Component {
 
             };
 
-            const res = await fetch('http://localhost:5000/user/viewProfile', req);
+            const res = await fetch('/user/viewProfile', req);
             const response = await res.json();
             console.log(res)
             if (res.status === 200) {

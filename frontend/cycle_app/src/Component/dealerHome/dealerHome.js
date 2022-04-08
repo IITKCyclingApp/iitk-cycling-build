@@ -52,7 +52,7 @@ class dealerHome extends React.Component {
 
             };
 
-            const res = await fetch('http://localhost:5000/user/viewcycle', req);
+            const res = await fetch('/user/viewcycle', req);
             const response = await res.json();
             console.log(response);
             if (res.status === 200) {
@@ -99,7 +99,7 @@ class dealerHome extends React.Component {
 
             };
 
-            const res = await fetch('http://localhost:5000/deleteCycle', req);
+            const res = await fetch('/deleteCycle', req);
             const response = await res.json();
 
             if (res.status === 200) {

@@ -54,7 +54,7 @@ class UserStore extends React.Component {
                 })
             };
 
-            let res = await fetch('http://localhost:5000/user/viewCycle', req);
+            let res = await fetch('/user/viewCycle', req);
             let response = await res.json();
             console.log("response ", response);
 
@@ -75,7 +75,7 @@ class UserStore extends React.Component {
                     })
                 };
 
-                res = await fetch('http://localhost:5000/user/viewFavorite', req);
+                res = await fetch('/user/viewFavorite', req);
                 let response2 = await res.json();
 
                 if (res.status === 200) {

@@ -51,7 +51,7 @@ class UserHome extends React.Component {
         })
       };
 
-      let res = await fetch('http://localhost:5000/user/currentStatus', req);
+      let res = await fetch('/user/currentStatus', req);
       let response = await res.json();
       // console.log("response",response);
 
@@ -106,7 +106,7 @@ class UserHome extends React.Component {
           })
         };
 
-        res = await fetch('http://localhost:5000/user/viewFavorite', req);
+        res = await fetch('/user/viewFavorite', req);
         let response2 = await res.json();
         // console.log("allData : ",response.temp);
 
@@ -174,7 +174,7 @@ class UserHome extends React.Component {
 
       };
 
-      const res = await fetch('http://localhost:5000/user/bookCycle', req);
+      const res = await fetch('/user/bookCycle', req);
       const response = await res.json();
 
       if (res.status === 200) {
@@ -243,7 +243,7 @@ class UserHome extends React.Component {
 
       };
 
-      const res = await fetch('http://localhost:5000/user/confirmBooking', req);
+      const res = await fetch('/user/confirmBooking', req);
       const response = await res.json();
 
       if (res.status === 200) {
@@ -302,7 +302,7 @@ class UserHome extends React.Component {
 
       };
 
-      const res = await fetch('http://localhost:5000/user/cancelBooking', req);
+      const res = await fetch('/user/cancelBooking', req);
       const response = await res.json();
 
       if (res.status === 200) {
@@ -353,7 +353,7 @@ class UserHome extends React.Component {
 
       };
 
-      let res = await fetch('http://localhost:5000/user/addFavorite', req);
+      let res = await fetch('/user/addFavorite', req);
       let favorites = this.state.favorites;
       favorites.push(this.state.allData[dealerId][cycleStoreId][cycleId]);
 
@@ -409,7 +409,7 @@ class UserHome extends React.Component {
 
       };
 
-      const res = await fetch('http://localhost:5000/user/deleteFavorite', req);
+      const res = await fetch('/user/deleteFavorite', req);
       const response = await res.json();
       // console.log("Delete response ",response);
 

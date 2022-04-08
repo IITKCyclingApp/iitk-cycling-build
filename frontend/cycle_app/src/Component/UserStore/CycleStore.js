@@ -43,7 +43,7 @@ class CycleStore extends React.Component{
   
             };
   
-            const res = await fetch('http://localhost:5000/user/bookCycle',req);
+            const res = await fetch('/user/bookCycle',req);
             const response  = await res.json();
 
             let allData = this.state.allData;
@@ -96,7 +96,7 @@ class CycleStore extends React.Component{
   
             };
   
-            let res = await fetch('http://localhost:5000/user/addFavorite',req);
+            let res = await fetch('/user/addFavorite',req);
             
   
             let allData = this.state.allData;
@@ -141,7 +141,7 @@ class CycleStore extends React.Component{
   
             };
   
-            const res = await fetch('http://localhost:5000/user/deleteFavorite',req);
+            const res = await fetch('/user/deleteFavorite',req);
             const response  = await res.json();
             // console.log("Delete response ",response);
   

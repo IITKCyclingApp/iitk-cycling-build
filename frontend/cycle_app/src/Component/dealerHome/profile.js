@@ -55,7 +55,7 @@ class dealerProfile extends React.Component {
 
             };
 
-            const res = await fetch('http://localhost:5000/dealerProfile', req);
+            const res = await fetch('/dealerProfile', req);
             const response = await res.json();
             console.log(response);
             if (res.status === 200) {
@@ -94,7 +94,7 @@ class dealerProfile extends React.Component {
 
             };
 
-            const res = await fetch('http://localhost:5000/rentCycles', req);
+            const res = await fetch('/rentCycles', req);
             const response = await res.json();
             console.log(response);
             if (res.status === 200) {
@@ -131,7 +131,7 @@ class dealerProfile extends React.Component {
 
             };
 
-            const res = await fetch('http://localhost:5000/bookedCycles', req);
+            const res = await fetch('/bookedCycles', req);
             const response = await res.json();
             console.log(response);
             if (res.status === 200) {
@@ -179,7 +179,7 @@ class dealerProfile extends React.Component {
 
             };
             console.log(req);
-            const res = await fetch('http://localhost:5000/returnCycle', req);
+            const res = await fetch('/returnCycle', req);
             const response = await res.json();
             console.log(response);
             if (res.status === 200) {

@@ -45,7 +45,7 @@ class Login extends React.Component {
 
       };
 
-      const res = await fetch('http://localhost:5000/loginUser', req);
+      const res = await fetch('/loginUser', req);
       const response = await res.json();
       
       if (res.status === 200) {
@@ -109,7 +109,7 @@ class Login extends React.Component {
 
       };
 
-      const res = await fetch('http://localhost:5000/RegisterUser', req);
+      const res = await fetch('/RegisterUser', req);
       const response = await res.json();
 
       console.log(res.status);
@@ -160,7 +160,7 @@ class Login extends React.Component {
 
       };
 
-      const res = await fetch('http://localhost:5000/loginDealer', req);
+      const res = await fetch('/loginDealer', req);
       const response = await res.json();
 
       if (res.status === 200) {
@@ -221,7 +221,7 @@ class Login extends React.Component {
 
       };
 
-      const res = await fetch('http://localhost:5000/RegisterDealer', req);
+      const res = await fetch('/RegisterDealer', req);
       const response = await res.json();
 
       console.log(res.status);
