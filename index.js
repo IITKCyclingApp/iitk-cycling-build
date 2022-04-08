@@ -88,5 +88,9 @@ app.post('/bookedCycles', currentBookedCycle);
 
 // app.use(express)
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log("Server stared on ", port));
+// const port = process.env.PORT || 5000;
+// app.listen(port, () => console.log("Server stared on ", port));
+const server = app.listen(process.env.PORT || 5000, () => {
+    const port = server.address().port;
+    console.log(`Express is working on port ${port}`);
+  });
