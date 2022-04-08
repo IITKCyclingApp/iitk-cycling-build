@@ -56,7 +56,7 @@ app.use(cors());
 // if(process.env.NODE_ENV){
     
 // }
-app.use(express.static(path.join(__dirname, '../frontend/cycle_app/build')));
+app.use(express.static("frontend/cycle_app/build"));
 app.get("*",(req,res)=>{
     res.sendFile(path.resolve(__dirname,'frontend','cycle_app','build','index.html'))
 })
