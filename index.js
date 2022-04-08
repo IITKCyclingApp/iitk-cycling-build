@@ -47,13 +47,13 @@ import loginUser from './auth/loginUser.js'
 import loginDealer from './auth/loginDealer.js'
 import verify from './auth/middlewareVerify.js'
 //middleware
+
+app.use(json());
+app.use(cors());
 if(process.env.NODE_ENV){
     
     app.use(express.static("frontend/cycle_app/build"));
 }
-app.use(json());
-app.use(cors());
-
 
 // app.use(express.static("./../iitk_cycling/public"));
 // app.set("view engine","ejs");
