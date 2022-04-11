@@ -279,7 +279,7 @@ class UserHome extends React.Component {
       alert(err);
 
     }
-    window.location.reload(false);
+    // window.location.reload(false);
   }
 
 
