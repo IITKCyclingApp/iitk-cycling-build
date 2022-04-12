@@ -116,7 +116,7 @@ class editCycle extends React.Component {
                         <div className="container">
                             <div className="signup-content">
                                 <div className="signup-form">
-                                    <h2 className="form-title">Add Cycle</h2>
+                                    <h2 className="form-title">Edit Cycle</h2>
                                     <form className="register-form" id="register-form">
 
 

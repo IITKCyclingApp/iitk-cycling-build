@@ -27,15 +27,14 @@ import statusModel from '../schema/statusSchema.js';
 async function returnCycle(req, res) {
     const data = req.body;
     console.log("request to return cycle");
-    console.log(data);
-    const time =new Date();
-    await statusModel.updateOne({ cycleId:data.cycleId,userId:data.userId }, { status : 3,timeEnd:time})
-    const data1 = await statusModel.findOne({userId:data.userId,cycleId:data.cycleId});
     
+    const time =new Date();
+    const data1 = await statusModel.findOne({userId:data.userId,cycleId:data.cycleId,status:2});
+    console.log(data1);
     const rate = data1.rate;
-    let cost = rate * (data1.timeEnd - data1.timeStart)/(1000*60*60);
+    let cost = rate * (time - data1.timeStart)/(1000*60*60);
     cost =parseInt(cost);
-    await statusModel.updateOne({ cycleId:data.cycleId,userId:data.userId }, { cost:cost});
+    await statusModel.updateOne({ cycleId:data.cycleId,userId:data.userId,status:2 }, { status : 3,timeEnd:time,cost:cost})
 
     res.status(200).json({ 'cost': cost });
 }

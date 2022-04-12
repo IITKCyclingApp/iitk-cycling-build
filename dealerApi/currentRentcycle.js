@@ -17,6 +17,7 @@ async function currentRentCycle(req, res) {
   console.log("request to current Rent Cycles");
 
   const transaction = await statusModel.find({ dealerId: req.body.dealerId, status: 2 });
+  console.log(transaction)
   let q = [];
   let i;
   for (i = 0; i < transaction.length; i++) {
@@ -53,7 +54,7 @@ async function currentRentCycle(req, res) {
 
 
   }
-
+  
   return res.status(200).json(q);
 
 }
